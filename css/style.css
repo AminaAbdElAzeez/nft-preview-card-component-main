@@ -1,0 +1,159 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+:root {
+    --softBlue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --veryDarkBlueMain: hsl(217, 54%, 11%);
+    --veryDarkBlueCard: hsl(216, 50%, 16%);
+    --veryDarkBlueLine: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+    --overlay: hsl(178, 100%, 50% ,0.5);
+    --shadow:hsl(217, 54%, 10%);
+}
+
+/* Card Section */
+.card {
+    height: 100vh;
+    background-color: var(--veryDarkBlueMain);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card .container {
+    width: 325px;
+    background-color: var(--veryDarkBlueCard);
+    padding: 20px 20px 30px 20px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    box-shadow: 0px 30px 35px 10px rgba(0.8, 0.8, 0.8, 0.3);
+}
+.card .card-img {
+    position: relative;
+    cursor: pointer;
+}
+.card .card-img img {
+    width: 100%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.card .card-img .overlay {
+    background-color: var(--overlay);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    -webkit-transition: opacity 0.5s, visibility 0.5s;
+    -moz-transition: opacity 0.5s, visibility 0.5s;
+    -ms-transition: opacity 0.5s, visibility 0.5s;
+    -o-transition: opacity 0.5s, visibility 0.5s;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+.card .card-img:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+.card .card-img .overlay .icon {
+    width: 35px;
+    height: 35px;
+}
+.card .card-title {
+    color: var(--white);
+    margin: 15px 0;
+    font-size: 21px;
+    cursor: pointer;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.card .card-title:hover {
+    color: var(--cyan);
+}
+.card .card-title + p {
+    color: var(--softBlue);
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+.card .card-info {
+    display: flex;
+    justify-content: space-between;
+}
+.card .card-info .card-item {
+    display: flex;
+    justify-content: flex-start;
+}
+.card .card-info .card-item img {
+    margin-right: 7px;
+    margin-bottom: 25px;
+    
+}
+.card .card-info .card-item .desc {
+    font-size: 16px;
+    width: 75px;
+}
+.card .card-info .card-item:first-child .desc {
+    color: var(--cyan);
+}
+.card .card-info .card-item:last-child .desc {
+    color: var(--softBlue);
+}
+.card .container hr {
+    border: 1px solid var(--veryDarkBlueLine);
+    margin-bottom: 20px;
+}
+.card .container .profile {
+    display: flex;
+}
+.card .container .profile .profile-img {
+    width: 35px;
+    height: 35px;
+    margin-right: 15px;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.card .container .profile p {
+    color: var(--white);
+    padding-top: 3px;
+    cursor: pointer;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
+}
+.card .container .profile p:hover {
+    color: var(--cyan);
+}
+.card .container .profile .special {
+    color: var(--softBlue);
+}
